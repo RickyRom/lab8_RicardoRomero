@@ -35,7 +35,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
             System.out.println("1.Iniciar Sesion Clientes");
             System.out.println("2.Iniciar Sesion Empleado");
             System.out.println("3.Registrarse como cliente");
-            System.out.println("4. Listar");
+            System.out.println("4.Salir");
             op1 = sc.nextInt();
             //menu principal
             if (op1 == 1) {
@@ -74,6 +74,16 @@ public class Lab3_RichardPadgett_RicardoRomero {
                             System.out.println(l.get(posio).getProd().get(i).toString());
 
                         }
+                        String b = "";
+                        int conta = 0;
+                        for (Productos po : pro) {
+                            if (po instanceof Productos) {
+                                b += conta + "" + "-" + po + "\n";
+                                conta++;
+                            }
+                        }
+                        System.out.println(b);
+                        
                         System.out.println("Ingrese la posicion del producto que quiere comprar: ");
                         int compra = sc.nextInt();
                         if (cliente != null) {
@@ -109,7 +119,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                         System.out.println("7.Eliminar Locales");
                         System.out.println("8.Eliminar Empleados");
                         System.out.println("9.Eliminar Productos");
-                        System.out.println("10. listar locales");
+                        System.out.println("10.listar locales");
                         op2 = sc.nextInt();
                         if (op2 == 4) {
 
@@ -132,7 +142,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                             System.out.println("Creacion locales de Comida, Tiendas y Quioscos");
                             System.out.println("1.Tiendas");
                             System.out.println("2.Quioscos");
-                            System.out.println(".Locales Comida");
+                            System.out.println("3.Locales Comida");
                             local = sc.nextInt();
                             if (local == 1) {
                                 System.out.println("Ingrese el tamaño de la Tienda: ");
@@ -156,7 +166,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                             }
 
                             if (local == 3) {
-
+                                
                             }
                         } else if (op2 == 2) {
                             System.out.println("ingrese el nombre de usuario del Empleado");
