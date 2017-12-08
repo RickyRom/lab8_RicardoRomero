@@ -52,7 +52,8 @@ public class Lab3_RichardPadgett_RicardoRomero {
                             if (((Clientes) o).getUser().equals(usuario) && ((Clientes) o).getPassw().equals(contra)) {
                                 posicion = r;
                                 es = true;
-                                //cliente = (Clientes) per;
+                                //cliente = (Clientes) o;
+                                break;
                             }
                             System.out.println("prueba2");
                         }
@@ -87,6 +88,7 @@ public class Lab3_RichardPadgett_RicardoRomero {
                         System.out.println("Ingrese la posicion del producto que quiere comprar: ");
                         int compra = sc.nextInt();
                         if (cliente != null) {
+
                             cliente.getFactura().add(l.get(posio).getProd().get(compra));
                             cont++;
                             if (cont % 5 == 0) {
@@ -95,11 +97,11 @@ public class Lab3_RichardPadgett_RicardoRomero {
                                 }
                             }
                         }
-                        String factura = "";
-                        for (int i = 0; i < cliente.getFactura().size(); i++) {
-                            factura += cliente.getNombrec();
-                        }
-                        System.out.println(factura);
+//                        String factura = "";
+//                        for (int i = 0; i < cliente.getFactura().size(); i++) {
+//                            factura += cliente.getFactura();
+//                        }
+//                        System.out.println(factura);
                         
                     } else {
                         System.out.println("Usuario o Contraseña Incorrecta");
