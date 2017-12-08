@@ -95,10 +95,16 @@ public class Lab3_RichardPadgett_RicardoRomero {
                                 }
                             }
                         }
+                        String factura = "";
+                        for (int i = 0; i < cliente.getFactura().size(); i++) {
+                            factura += cliente.getNombrec();
+                        }
+                        System.out.println(factura);
+                        
                     } else {
                         System.out.println("Usuario o Contraseña Incorrecta");
                     }
-                } while (es = false);
+                } while (es == true);
 
             } else if (op1 == 2) {
                 System.out.println("Ingrese su nombre de usuaro");

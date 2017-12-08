@@ -34,6 +34,6 @@ public class Tiendas extends Locales{
 
     @Override
     public String toString() {
-        return "Tiendas{" + "tama\u00f1o=" + tamaño + '}';
+        return "Tiendas{" + super.nombre+"tama\u00f1o=" + tamaño + '}';
     }
 }
